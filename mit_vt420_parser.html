@@ -414,7 +414,7 @@ Having been generated, the lines of .tbl files must be (ignoring the comments an
 These files define escape sequences with the FINAL character coming
 immediately after the escape character. The fields are: 
 <br>
-<b>&lt character &gt;, &lt default &gt;, &lt command &gt;,</b>
+<b>&lt; character &gt;, &lt; default &gt;, &lt; command &gt;,</b>
 <P>
 <h3><p align="center">VTE2.T</h3>
 <P>
@@ -422,34 +422,34 @@ This file defines escape sequences that consist of exactly two
 characters coming after the escape character (INTERMEDIATE and
 FINAL characters). The fields are: 
 <br>
-<b>&lt intermediate character &gt;, &lt final character &gt;,
-&lt default &gt;, &lt command &gt;,</b>
+<b>&lt; intermediate character &gt;, &lt; final character &gt;,
+&lt; default &gt;, &lt; command &gt;,</b>
 <P>
 <h3><p align="center">VTCSI.T</h3>
 <P>
 This file defines <tt>CSI</tt> sequences (sequences that start with <tt>CSI</tt>
 or <tt>ESC [</tt>). The fields are: 
 <br>
-<b>&lt final character &gt;, &lt flag &gt;, &lt argtype &gt;,
-&lt default &gt;, &lt command &gt;,</b>
+<b>&lt; final character &gt;, &lt; flag &gt;, &lt; argtype &gt;,
+&lt; default &gt;, &lt; command &gt;,</b>
 <P>
 Here the <final character> is its ASCII code. The flag is a bitwise
 combination of flags as defined in the second table in VTTABLE.C.
-<h4><p>&lt argtype &gt;:</h4>
+<h4><p>&lt; argtype &gt;:</h4>
 <UL>
-<LI>If <code><var>argtype</var> &lt PA_MAXARG</code>:<br>
-Argtype defines the switch for the &lt command &gt. If there
+<LI>If <code><var>argtype</var> &lt; PA_MAXARG</code>:<br>
+Argtype defines the switch for the &lt; command &gt;. If there
 exists switch 0, it is considered to be the default and is used
-if the switch is omitted. The &lt default &gt is passed
+if the switch is omitted. The &lt; default &gt; is passed
 as <var>iArgs[0]</var>. Note, there maybe many switches (<var>argtypes</var>) for the
-same &lt final character &gt
-and &lt flag &gt as long as <strong>each</strong> argtype &lt <tt>PA_MAXARGS</tt>.  If a "switchable" command
+same &lt; final character &gt;
+and &lt; flag &gt; as long as <strong>each</strong> argtype &lt; <tt>PA_MAXARGS</tt>.  If a "switchable" command
 has more than one argument, it is called separately for each argument.
 Unknown switches are ignored.
 <P>
-<LI>If <code>PA_MAXARG &lt <var>argtype</var> &lt= PA_MULTIARG</code>,<br>
+<LI>If <code>PA_MAXARG &lt; <var>argtype</var> &lt;= PA_MULTIARG</code>,<br>
 The function accepts <code>( PA_PN1 - argtype + 1 )</code> arguments. If any of the arguments are missing or 0, a default value of
-&lt default &gt is used. It is an error if the command contains more arguments than
+&lt; default &gt; is used. It is an error if the command contains more arguments than
 <var>argtype</var> specifies. The
 arguments are passed as <var>iArgs</var> array in PS block. <var>iArgs[0]</var> corresponds to the first argument; <var>iArgs[1]</var>, to the second, and so on.
 <P>
@@ -457,11 +457,11 @@ arguments are passed as <var>iArgs</var> array in PS block. <var>iArgs[0]</var> 
 This is the same as the case above, except the number of the arguments
 is taken to be the <strong>maximun</strong> number of the arguments (<tt>VTARGS</tt>) the parser can accept.
 HINT: It might be useful if you want to fill all the unused arguments in <var>iArgs</tt> with
-the &lt default &gt value (otherwise they are undefined).
+the &lt; default &gt; value (otherwise they are undefined).
 <P>
 <LI>If <code><var>argtype</var> &gt; PA_MULTIARG</code>:<br>
 The function accepts <strong>groups</strong> of arguments. A group contains <code>( PA_PN1 - <var>argtype</var> + 1 + PA_MULTIARG )</code> arguments.
-The arguments are passed and the &lt default &gt value is used in the
+The arguments are passed and the &lt; default &gt; value is used in the
 same way as before. The command is called as many times as there
 are groups of arguments. Each time <var>iArgs[0]</var> is the first arguments
 of the group, <var>iArgs[1]</var> is the second, and so on. HINT: You may
@@ -473,7 +473,7 @@ VTDCS.T</h3>
 <P>
 This file defines <tt>DCS</tt> sequences that are processed by the DCS-processing
 functions. The fields are:<br>
-<b>&lt final character &gt;, &lt flag &gt;, &lt dcs-processing function's name &gt;,</b>
+<b>&lt; final character &gt;, &lt; flag &gt;, &lt; dcs-processing function's name &gt;,</b>
 <h4>Special Note:</h4>
 <tt>DO__DIRECT</tt> is an internal for the parser command that stands for
 VT52's Direct Cursor Positioning command. If it is present among
