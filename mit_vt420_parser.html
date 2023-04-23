@@ -18,7 +18,7 @@
 <EM>[This page replicates the developer's page at MIT. ...RSS]</EM>
 <BR>
 <h3>
-<p align=center>
+<p align="center">
 <A HREF="ftp://net-dist.mit.edu/pub/dos/for-developers/parser.zip"
 	>Download the source code for the parser from MIT</A>
 or
@@ -98,7 +98,7 @@ agrees to preserve same.
 <BR>
 
 <HR>
-<H2><P ALIGN=CENTER><A NAME="Files Required">Files Required:</A></H2>
+<H2><P ALIGN="CENTER"><A NAME="Files Required">Files Required:</A></H2>
 <P>
 <UL>
 <LI><tt><b>VT420.H</b> ------- </tt> <i>The Header File To Be Included By The Application Program</i>
@@ -131,7 +131,7 @@ agrees to preserve same.
 </OL>
 <HR>
 
-<H2><P ALIGN=CENTER><A NAME="Compatability And Portability">
+<H2><P ALIGN="CENTER"><A NAME="Compatability And Portability">
 Compatability And Portability Of the Parser:</A>
 </H2><P>
 VTPARSER is written completely in ANSI C to guarantee its compatibility
@@ -149,7 +149,7 @@ with the mnemonic allows.
 In order to use this VTParser within your applications, you will
 need to include VT420.H header file.
 <hr>
-<H2><p align=center><A NAME="Functions">Functions available to the application:</A></h2>
+<H2><p align="center"><A NAME="Functions">Functions available to the application:</A></h2>
 <P>
 <UL>
 <LI><A NAME="InitializeParser"><CODE>PS PASCAL InitializeParser( void );</CODE></A><br>
@@ -219,10 +219,10 @@ sequence.  For more information, look at <A HREF="#curdcs"><var>curdcs</var></A>
 </UL>
 <hr>
 <H2>
-<P align=center>
+<P align="center">
 <A NAME="vars">PS structure's variables available to the application:</A></H2>
 <h3>
-<P align=center>
+<P align="center">
 <A NAME="Read/Write">The following variables are available for READ/WRITE:</A></h3>
 <P>
 <UL>
@@ -241,7 +241,7 @@ dumping might prove useful for the debugging purposes.
 </UL>
 <p>
 <h3>
-<P align=center>
+<P align="center">
 <A NAME="READ ONLY">The following variables are available for READ ONLY:</A></h3>
 <p>
 <h4>Please do NOT modify these variables, or the parser may become
@@ -291,8 +291,8 @@ are undefined. Also, you must run <code>ResetParser</code> or <code>PARSER_TERMD
 ps )</code> BEFORE calling <code>ProcessSKIP</code>.
 </UL>
 <hr>
-<h2><p align=center><a name="VTTABLE.C">Customizing VTTABLE.C</a></h2>
-<h3><p align=center><code>const PA_INT parse_tbl[];</code></h3>
+<h2><p align="center"><a name="VTTABLE.C">Customizing VTTABLE.C</a></h2>
+<h3><p align="center"><code>const PA_INT parse_tbl[];</code></h3>
 <P>
 The first table defined in VTTABLE.C describes the action the
 parser has to perform when it encounters a corresponding ASCII
@@ -325,7 +325,7 @@ if encountered within an escape sequence.
 </UL>
 <P>
 <h3>
-<P align=center>
+<P align="center">
 <code>const PA_USHORT flag_tbl[];</code> </h3>
 <P>
 The second table defined in VTTABLE.C is a flag table. It describes
@@ -338,7 +338,7 @@ in VTCONST.H
 <tt>0x????</tt> flag bit
 </UL>
 <P>
-<h3><p align=center><code>const PA_USHORT hextodec[];</code></h3>
+<h3><p align="center"><code>const PA_USHORT hextodec[];</code></h3>
 <P>
 This is a lookup table for the conversions of hexadecimals to
 decimals. The values are:
@@ -348,7 +348,7 @@ decimals. The values are:
 <LI><tt>HEXERROR -- </tt>not a hexadecimal character
 </UL>
 <P>
-<h3><p align=center><code>const PA_SHORT keytbl[];</code></h3>
+<h3><p align="center"><code>const PA_SHORT keytbl[];</code></h3>
 <P>
 This is a table that correlates the key codes to the actual functional
 key numbers for <code>Process_DECUDK</code>. Values:
@@ -358,13 +358,13 @@ key numbers for <code>Process_DECUDK</code>. Values:
 <LI><tt>negative -- </tt>Always-alternate function key number
 </UL>
 <p>
-<h3><p align=center><code>const PA_SHORT attrtbl[];</code></h3>
+<h3><p align="center"><code>const PA_SHORT attrtbl[];</code></h3>
 <P>
 This is a table that related the attributes to their codes. Note,
 <tt>ATTR_BOLD</tt> is associated with code 1 and code 2. Attributes are
 defined in VTCONST.H
 <P>
-<h3><p align=center><code>const PA_SHORT citbl[];</code></h3>
+<h3><p align="center"><code>const PA_SHORT citbl[];</code></h3>
 <P>
 This table contains the code-types for <code>Process_DECRSCI</code>. The values
 are:
@@ -374,7 +374,7 @@ are:
 <LI><tt>CI_GXX -- </tt>A special type: <i>Sdesig</i> format
 </UL>
 <HR>
-<h2><p align=center>Customizing Escape, Control, And Device Sequence Definitions:</h2>
+<h2><p align="center">Customizing Escape, Control, And Device Sequence Definitions:</h2>
 <P>
 All escape sequence definition tables can contain blank lines
 and comments surrounded by <tt>/*</tt> and <tt>*/</tt> (typical c-style comments).
@@ -386,7 +386,7 @@ that every line that contains an escape definition MUST end with
 a comma even if it is the last line of the file. For examples
 see the provided .T files.
 
-<h3><P ALIGN=CENTER>As the bottom line:</h3>
+<h3><P ALIGN="CENTER">As the bottom line:</h3>
 <P>
 The .tbl files will be generated from .t files by:
 <OL>
@@ -406,7 +406,7 @@ Having been generated, the lines of .tbl files must be (ignoring the comments an
 </UL>
 </OL>
 <p>
-<h3><p align=center>VTE1xxxx.T</h3>
+<h3><p align="center">VTE1xxxx.T</h3>
 <UL>
 <LI><tt>VTE152.T ---- </tt>is used in VT52 mode 
 <LI><tt>VTE1ANSI.T -- </tt>is used in VT420 mode 
@@ -416,7 +416,7 @@ immediately after the escape character. The fields are:
 <br>
 <b>&lt character &gt;, &lt default &gt;, &lt command &gt;,</b>
 <P>
-<h3><p align=center>VTE2.T</h3>
+<h3><p align="center">VTE2.T</h3>
 <P>
 This file defines escape sequences that consist of exactly two
 characters coming after the escape character (INTERMEDIATE and
@@ -425,7 +425,7 @@ FINAL characters). The fields are:
 <b>&lt intermediate character &gt;, &lt final character &gt;,
 &lt default &gt;, &lt command &gt;,</b>
 <P>
-<h3><p align=center>VTCSI.T</h3>
+<h3><p align="center">VTCSI.T</h3>
 <P>
 This file defines <tt>CSI</tt> sequences (sequences that start with <tt>CSI</tt>
 or <tt>ESC [</tt>). The fields are: 
@@ -468,7 +468,7 @@ of the group, <var>iArgs[1]</var> is the second, and so on. HINT: You may
 set <var>argtype</var> to define groups of one argument. This will allow
 parsing the strings of unlimited number of arguments. 
 </UL>
-<h3><P align=center>
+<h3><P align="center">
 VTDCS.T</h3>
 <P>
 This file defines <tt>DCS</tt> sequences that are processed by the DCS-processing
@@ -480,7 +480,7 @@ VT52's Direct Cursor Positioning command. If it is present among
 the escape sequence definitions, it can only be in VTE1xxxx.T
 files.
 <HR>
-<h2><p align=center>Writing DCS-Processing Functions:</h2>
+<h2><p align="center">Writing DCS-Processing Functions:</h2>
 <P>
 If you will be adding the processing for the new <tt>DCS</tt> sequences,
 you will need to create your function to conform to DCS-processing
@@ -514,7 +514,7 @@ In any case, do not forget to add an entry
 about your function to VTDCS.T and build VTDCS.TBL.
 <HR>
 <h2>
-<P align=center>Processing Unusual And Nonstandard Commands:</h2>
+<P align="center">Processing Unusual And Nonstandard Commands:</h2>
 <UL>
 <LI>
 If you have to add the processing for a command for which the
@@ -542,7 +542,7 @@ the similar commands, you will may have to patch <code>ProcessCSI</code> or
 <strong>Example of the patch of <code>ProcessCSI</code>:</strong> <tt>DO_PRNCTRL</tt>.
 </UL>
 <HR>
-<h2><P align=center>Extra Compatibility Scheme:</h2>
+<h2><P align="center">Extra Compatibility Scheme:</h2>
 <P>
 This parser is written and the .T files are distributed with the
 Extra Compatibility scheme in mind. This scheme means that in
@@ -560,7 +560,7 @@ command. However, if <tt>ESC Y</tt> is encountered in VT420 mode, it still
 will be interpreted as direct cursor positioning, even though
 formal VT420 specification does not define <tt>ESC Y</tt> to do anything.
 <HR>
-<h2><P align=center>Nonstandard Commands Supported by the Parser:</h2>
+<h2><P align="center">Nonstandard Commands Supported by the Parser:</h2>
 <P>
 A few commands understood by this parser are <strong>not</strong> standard VT commands.
 However, a few terminal programs do use them. Theses are the commands
@@ -571,7 +571,7 @@ responses) unique to this parser. They are <tt>XSUPP</tt> (command) and <tt>XOK<
 <tt>XERROR</tt> (responses). Please, refer to VTCMND.H for a detailed
 description of each command.
 <HR>
-<h2><P align=center>Compiling in the Debugging Mode:</h2>
+<h2><P align="center">Compiling in the Debugging Mode:</h2>
 <P>
 When the parser is compiled in the debugging mode, it provides
 some additional tests of the integrity of the code and the tables.
@@ -580,7 +580,7 @@ and <var>iArgs[0]</var> is set to the error code. A list of error codes is
 found in VTCMND.H. The debugging code is compiled if <tt>_DEBUG</tt> or
 <tt>_PA_DEBUG</tt> symbols are defined.
 <HR>
-<h2><P align=center>Using the Debug Shell (SHELL.C):</h2>
+<h2><P align="center">Using the Debug Shell (SHELL.C):</h2>
 <P>
 SHELL.C is a debugging tool that can be used to test the parser's
 functionality on a known VT420 data stream or to test the VT420
@@ -594,7 +594,7 @@ ASCII value of 255. Function ProcessAnsi prints out a character
 if a character is received or announces that a function is received
 and shows its value, mnemonic, and the contents of <var>iArgs</var> array.
 <HR>
-<h2><P align=center>Compiling the Parser Applications:</h2>
+<h2><P align="center">Compiling the Parser Applications:</h2>
 <P>
 The very first time before you compile VTESCSEQ.C, and every time
 you change any of the .T files, you will need to run MAKETBL.BAT
